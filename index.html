@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 정보 앱</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ 날씨 정보</h1>
+        </header>
+        
+        <div class="search-section">
+            <input type="text" id="cityInput" placeholder="도시 이름을 입력하세요 (예: Seoul, Tokyo, New York)">
+            <button id="searchBtn">검색</button>
+        </div>
+        
+        <div class="weather-card" id="weatherCard" style="display: none;">
+            <div class="weather-header">
+                <h2 id="cityName"></h2>
+                <p id="currentTime"></p>
+            </div>
+            
+            <div class="weather-main">
+                <div class="temperature">
+                    <span id="temp"></span>
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="날씨 아이콘">
+                    </div>
+                </div>
+                <div class="weather-description">
+                    <p id="condition"></p>
+                    <p id="feelsLike"></p>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">습도</span>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">바람</span>
+                    <span id="wind"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">가시거리</span>
+                    <span id="visibility"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">기압</span>
+                    <span id="pressure"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <p>⚠️ 도시를 찾을 수 없습니다. 다시 시도해주세요.</p>
+        </div>
+        
+        <div class="loading" id="loading" style="display: none;">
+            <p>🔄 날씨 정보를 불러오는 중...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
